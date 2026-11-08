@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="library.css">
+    <title>樹冠下的書藏</title>
+    <meta name="description" content="一個森林風格的電子圖書館">
+    <script src="library.js" defer></script>
+  </head>
+  
+  <body>
+
+    <header>
+      <div>
+        <h1 id="title"><em>樹冠下的書藏</em></h1>
+        <h2><em>Sylvan Folios</em></h2>
+      </div>
+
+
+      <nav class="setting-vine">
+        <button type="button" id="vine-settings-btn" aria-label="系統設定與選單">
+          <img src="" alt="" class="vine-img">
+        </button>
+      </nav>
+    </header>
+
+    <main class="app-viewport">
+      <section id="homepage">
+        <button type="button" id="desk-btn" aria-label="書桌-個人書庫">
+          <img src="" alt="" class="desk-img">
+          <span>個人書庫</span>
+        </button>
+ㄋ
+        
+        <button type="button" id="shelf-btn" aria-label="書櫃-檢索書籍">
+          <img src="" alt="" class="shelf-img">
+          <span>檢索書籍</span>
+        </button>
+      </section>
+
+
+      <section hidden>
+        <h2>個人書庫</h2>
+      </section>
+
+
+      <section hidden>
+        <h2>檢索書籍</h2>
+      </section>
+
+
+      <dialog>
+          <h2></h2>
+          <p></p>
+          <button></button>
+        </dialog>
+    </main>
+
+
+    <dialog class="setting-menu">
+      <h2>系統設定</h2>
+      <ul>
+        <li>
+          <button type="button" id="theme-menu-btn" aria-label="切換主題">
+            <img src="" alt="" class="theme-img">
+            <span>切換主題</span>
+          </button>
+        </li>
+
+        <li>
+          <button type="button" id="language-menu-btn" aria-label="切換語言">
+            <img src="" alt="" class="language-img">
+            <span>切換語言</span>
+          </button>
+        </li>
+
+        <li>
+          <button type="button" id="about-menu-btn" aria-label="使用教學">
+            <img src="" alt="" class="about-img">
+            <span>使用教學</span>
+          </button>
+        </li>
+
+        <li>
+          <button type="button" id="close-menu-btn" aria-label="關閉選單">
+            <img src="" alt="" class="close-img">
+            <span>關閉選單</span>
+          </button>
+        </li>
+      </ul>
+
+    </dialog>
+  </body>
+
+</html>

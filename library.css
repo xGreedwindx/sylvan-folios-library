@@ -1,0 +1,17 @@
+body {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    background-color : #301e17;
+    background-image : url("dark-wood-texture.jpg");
+    font-family : Arial, sans-serif;
+    margin : 0;
+    padding : 0;
+    min-height : 100vh;
+}
+
+main {
+    background : url("cozy-room-fantasy-backgound.jpg") no-repeat center center fixed;
+    
+}
