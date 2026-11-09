@@ -1,17 +1,76 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin : 0;
+  padding: 0;
+}
+
 body {
     display : flex;
     flex-direction : column;
     justify-content : center;
     align-items : center;
+
     background-color : #301e17;
-    background-image : url("dark-wood-texture.jpg");
+    background-image : url("Dark-wooden-board-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    min-height : 100dvh;
     font-family : Arial, sans-serif;
-    margin : 0;
-    padding : 0;
-    min-height : 100vh;
+    aspect-ratio: 2752 / 1536;
+
 }
 
-main {
-    background : url("cozy-room-fantasy-backgound.jpg") no-repeat center center fixed;
+
+header {
+    display : flex;
+    align-items : center;
     
+    position : absolute;
+    z-index : 10;
+    top : 0;
+
+    width : 100%;
+}
+
+
+.app-viewport {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;  
+
+    position : relative;
+    z-index : 1;
+
+    background-image : url("daytime-room-fantasy-background.jpg");
+    background-size : cover;
+    background-position : center;
+
+    width: 90%;
+    max-width: 2300px;
+    height: 100%;
+
+    border-left : 2px solid black;
+    border-right : 2px solid black;
+}
+
+
+.app-viewport::after {
+    content : "";
+    pointer-events: none;
+    position : absolute;
+    z-index : 5; 
+    bottom : 0;
+
+    background : linear-gradient(
+     to bottom, 
+     rgba(26, 16, 12, 0) 0%, 
+     rgba(26, 16, 12, 0.7) 60%, 
+     #1a100c 100%
+    );
+
+    width : 100%;
+    height : 18%;
 }
