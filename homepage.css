@@ -11,7 +11,7 @@ body {
     align-items : center;
 
     background-color : #301e17;
-    background-image : url("Dark-wooden-board-background.jpg");
+    background-image : url("images/Dark-wooden-board-background.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -35,7 +35,7 @@ header {
 }
 
 
-.app-viewport {
+.homepage {
     display : flex;
     flex-direction : column;
     justify-content : center;
@@ -44,7 +44,7 @@ header {
     position : relative;
     z-index : 1;
 
-    background-image : url("daytime-room-fantasy-background.jpg");
+    background-image : url("images/daytime-room-fantasy-background.webp");
     background-size : cover;
     background-position : center;
 
@@ -52,12 +52,10 @@ header {
     max-width: 2300px;
     height: 100%;
 
-    border-left : 2px solid black;
-    border-right : 2px solid black;
 }
 
 
-.app-viewport::after {
+.homepage::after {
     content : "";
     pointer-events: none;
     position : absolute;

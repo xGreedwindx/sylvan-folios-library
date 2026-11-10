@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="homepage.css">
+    <title>樹冠下的書藏</title>
+    <meta name="description" content="一個森林風格的電子圖書館">
+    <script src="homepage.js" defer></script>
+  </head>
+  
+  <body>
+
+    <!-- <header>
+      <nav class="">
+
+      </nav>
+    </header> -->
+
+    <main class="homepage">
+      
+      <div class="sign"></div>
+          <img src="images/wooden-board.jpg" alt="" class="wooden-board-img" id="wooden-board-img">
+          <h1>樹冠下的書藏</h1>
+          <h2 lang="en">Sylvan Folios</h2>
+      </div>
+
+
+      <button type="button" id="vine-settings">
+          <img src="images/vine-settings.jpg" alt="" class="vine-img" id="vine-img">
+          <span>系統設定</span>
+      </button>
+
+
+      <a href="personal-page.html" id="personal-page-btn">
+        <figure>
+          <img src="images/daytime-desk-fantasy.jpg" alt="" class="desk-img" id="desk-img">
+          <figcaption>個人書庫</figcaption>
+        </figure>
+      </a>
+
+
+      <a href="searching-books-page.html" id="search-page-btn">
+        <figure>
+          <img src="images/daytime-desk-fantasy.jpg" alt="" class="search-img" id="search-img">
+          <figcaption>檢索書籍</figcaption>
+        </figure>
+      </a>
+
+    </main>
+
+    <dialog arial-labelledy="welcome-dialog" class="welcome-dialog">
+
+        <h2 id="welcome-dialog"></h2>
+
+        <p></p>
+
+        <form method="dialog">
+          <button aria-label="關閉歡迎視窗">X</button>
+        </form>
+
+    </dialog>
+
+    <dialog arial-labelledy="settings-title"class="setting-menu">
+
+      <h2 id="settings-title">系統設定</h2>
+
+      <ul>
+        <li>
+          <button type="button" id="theme-menu-btn">
+            <img src="" alt="" class="theme-img">
+            <span>切換主題</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="language-menu-btn" disabled>
+            <img src="" alt="" class="language-img">
+            <span>切換語言</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="about-menu-btn" disabled>
+            <img src="" alt="" class="about-img">
+            <span>使用教學</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="close-menu-btn">
+            <img src="" alt="" class="close-img">
+            <span>關閉選單</span>
+          </button>
+        </li>
+      </ul>
+
+    </dialog>
+  </body>
+
+</html>
