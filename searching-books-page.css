@@ -6,12 +6,11 @@
 
 body {
     display : flex;
-    flex-direction : column;
     justify-content : center;
     align-items : center;
 
     background-color : #301e17;
-    background-image : url("images/Dark-wooden-board-background.webp");
+    background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/searching-books-page-img/daytime-bookshelf-mid.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -20,16 +19,4 @@ body {
     font-family : Arial, sans-serif;
     aspect-ratio: 2752 / 1536;
 
-}
-
-
-header {
-    display : flex;
-    align-items : center;
-    
-    position : absolute;
-    z-index : 10;
-    top : 0;
-
-    width : 100%;
 }

@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"  content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="personal-page.css">
     <title>個人書頁</title>
     <meta name="description" content="一個含有個人資料、書籍收藏與閱讀紀錄的頁面">
@@ -12,14 +13,130 @@
   
   <body>
 
-    <header>
-      <nav class="setting-vine">
+    <!-- <header>
+      <nav class="">
         
       </nav>
-    </header>
+    </header> -->
 
-    <main class="app-viewport">
+    <main class="">
+
+      <a href="index.html" id="homepage-logo">
+        <img src="1.jpg" alt="" class="wooden-board-img" id="wooden-board-img">
+        <h1>樹冠下的書藏</h1>
+        <h2 lang="en">Sylvan Folios</h2>
+      </a>
+
+      <div>
+        
+        <section class="personal-info">
+
+          <h2>個人資料</h2>
+
+          <form id="personal-info-form" class="personal-info-form">
+
+            <label>
+              <img src=""
+              alt="目前大頭貼"
+              class="user-avatar-img"
+              id="user-avatar-img"
+              >
+              更換頭像：
+              <input id="user-avatar" name="user-avatar" type="file" accept="image/*">
+            </label>
+
+
+            <label>
+              姓名： 
+              <input id="user-name" name="user-name" autocomplete="name" type="text" required placeholder="更改姓名"> 
+            </label>
+
+
+            <label>
+              電子郵件：
+              <input id="user-email"
+                name="user-email"
+                autocomplete="email"
+                type="email"
+                placeholder="更改電子郵件"
+                disabled
+                required>
+            </label>
+            <p>注意：電子郵件無法更改，若需更改請聯絡系統管理員。</p>
+
+            <label>
+              自我介紹：
+              <textarea name="personal-introduction" id="personal-introduction" placeholder="請輸入個人簡介"></textarea>
+            </label>
+
+            
+            <button type="submit">儲存</button>
+
+          </form>
+
+        </section>
+        
+
+        <section>
+
+          <a href="" id="login-page-btn">
+            <figure>
+              <img src=""
+                alt="" 
+                class="login-img" 
+                id="login-img"
+              >
+              <figcaption>登入頁面</figcaption>
+            </figure>
+          </a>
+
+
+          <a href="" id="report-bonus-btn">
+            <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/personal-page-img/sealed-letters.webp"
+              alt="" 
+              class="report-bonus-img" 
+              id="report-bonus-img"
+              aria-label="封存紀錄"
+            >
+          </a>
+          
+        </section>
+        
+      </div>
       
+      <div>
+
+        <section class="book-collection">
+
+          <h2>書籍收藏</h2>
+
+        </section> 
+
+
+        <section class="reading-record">
+
+          <h2>閱讀紀錄</h2>
+
+        </section>
+
+
+        <section class="borrowing-record">
+
+          <h2>借閱紀錄</h2>
+          
+        </section>
+
+      </div>
+      
+      <button type="button" id="prev-page-btn" class="page-nav-btn prev-btn" aria-label="上一頁">
+        <img src="" alt="" class="vine-arrow-img">
+      </button>
+
+
+      <button type="button" id="next-page-btn" class="page-nav-btn next-btn" aria-label="下一頁">
+        <img src="" alt="" class="vine-arrow-img">
+      </button>
+
     </main>
     
   </body>

@@ -6,52 +6,35 @@
 
 body {
     display : flex;
-    flex-direction : column;
     justify-content : center;
     align-items : center;
 
     background-color : #301e17;
-    background-image : url("images/Dark-wooden-board-background.webp");
+    background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/index-img/daytime-wooden-board-background.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+    overflow : hidden;
+
     min-height : 100dvh;
     font-family : Arial, sans-serif;
-    aspect-ratio: 2752 / 1536;
-
 }
 
-
-header {
-    display : flex;
-    align-items : center;
-    
-    position : absolute;
-    z-index : 10;
-    top : 0;
-
-    width : 100%;
-}
 
 
 .homepage {
-    display : flex;
-    flex-direction : column;
-    justify-content : center;
-    align-items : center;  
-
     position : relative;
     z-index : 1;
 
-    background-image : url("images/daytime-room-fantasy-background.webp");
+    background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/index-img/daytime-room-fantasy-background.webp");
     background-size : cover;
     background-position : center;
+    background-repeat : no-repeat;
 
-    width: 90%;
+    width: min(100vw, calc(100dvh * (2752 / 1536)));
     max-width: 2300px;
-    height: 100%;
-
+    height: 100dvh;
+    aspect-ratio: 2752 / 1536;
 }
 
 
@@ -60,6 +43,7 @@ header {
     pointer-events: none;
     position : absolute;
     z-index : 5; 
+    left : 0;
     bottom : 0;
 
     background : linear-gradient(
@@ -70,5 +54,43 @@ header {
     );
 
     width : 100%;
-    height : 18%;
+    height: 18%;
+}
+
+
+
+#homepage-logo {
+    position : absolute;
+    z-index : 10;
+    top : 0;
+    left : 50%;
+
+    width : 15%;
+    height: 10%;
+}
+
+
+#personal-page-btn {
+    display:block;
+
+    position : absolute;
+    z-index : 10;
+    bottom : 10%;
+    left : 20%;
+
+    width : 20%;
+    height: 20%;
+}
+
+
+#search-page-btn {
+    display : block;
+
+    position : absolute;
+    z-index : 10;
+    bottom : 10%;
+    right : 5%;
+
+    width : 20%;
+    height: 20%;
 }

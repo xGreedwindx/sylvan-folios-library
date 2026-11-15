@@ -6,28 +6,88 @@
 
 body {
     display : flex;
-    flex-direction : column;
     justify-content : center;
     align-items : center;
 
     background-color : #301e17;
-    background-image : url("images/Dark-wooden-board-background.webp");
+    background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/personal-page-img/daytime-desktop.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    overflow: hidden;
     
     min-height : 100dvh;
     font-family : Arial, sans-serif;
+}
+
+main {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+
+    position : relative;
+    z-index : 1;
+
+    background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/personal-page-img/daytime-book-background.webp");
+    background-size : cover;
+    background-position : center;
+    background-repeat: no-repeat;
+
+    width: min(100vw, calc(100dvh * (2752 / 1536)));
+    max-width: 2300px;
+    height: 100dvh;
     aspect-ratio: 2752 / 1536;
 }
 
-header {
-    display : flex;
-    align-items : center;
-    
+
+main div {
+    /* width : 50%;
+    height: 90%;
+    background : black; */
+}
+
+#homepage-logo {
     position : absolute;
     z-index : 10;
     top : 0;
+    left : 50%;
 
-    width : 100%;
+    width : 15%;
+    height: 10%;
+}
+
+#report-bonus-img {
+    position : absolute;
+    z-index : 10;
+    bottom : 7%;
+    left : 42%;
+    transform : translateY(-50%);
+
+    width : 5%;
+    height : auto;
+}
+
+#prev-page-btn{
+    position : absolute;
+    bottom : 15%;
+    left : 20%;
+    transform : translateY(-50%);
+    z-index : 10;
+
+    background-color : transparent;
+    border : none;
+    cursor : pointer;
+}
+
+#next-page-btn{
+    position : absolute;
+    bottom : 15%;
+    right : 20%;
+    transform : translateY(-50%);
+    z-index : 10;
+
+    background-color : transparent;
+    border : none;
+    cursor : pointer;
 }
