@@ -4,10 +4,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"  content="width=device-width,initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iansui&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="searching-books-page.css">
+
     <title>搜尋書籍頁面</title>
     <meta name="description" content="一個含有書籍搜尋、篩選與排序功能的頁面">
+
     <script src="searching-books-page.js" defer></script>
   </head>
   
@@ -22,12 +31,66 @@
     <main class="">
 
       <a href="index.html" id="homepage-logo">
-        <img src="1.jpg" alt="" class="wooden-board-img" id="wooden-board-img">
+        <img src="1.jpg" alt="" id="wooden-board-img" class="wooden-board-img">
         <h1>樹冠下的書藏</h1>
         <h2 lang="en">Sylvan Folios</h2>
       </a>
 
+
+      <button type="button" id="vine-setting">
+        <img src="1.jpg" alt="" id="vine-img" class="vine-img">
+        <span>系統設定</span>
+      </button>
+
+      <section>
+        <input>
+      </section>
+
+
+      <section>
+
+      </section>
+
     </main>
+
+    <dialog arial-labelledy="settings-title"class="setting-menu">
+
+      <h2 id="settings-title">系統設定</h2>
+
+      <ul>
+        <li>
+          <button type="button" id="theme-menu-btn">
+            <img src="" alt="" class="theme-img">
+            <span>切換主題</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="language-menu-btn" disabled>
+            <img src="" alt="" class="language-img">
+            <span>切換語言</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="about-menu-btn" disabled>
+            <img src="" alt="" class="about-img">
+            <span>使用教學</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="close-menu-btn">
+            <img src="" alt="" class="close-img">
+            <span>關閉選單</span>
+          </button>
+        </li>
+      </ul>
+
+    </dialog>
 
   </body>
 

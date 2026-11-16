@@ -1,22 +1,34 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin : 0;
-  padding: 0;
+body {
+    background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/searching-books-page-img/daytime-bookshelf-mid.webp");
 }
 
-body {
-    display : flex;
-    justify-content : center;
-    align-items : center;
+main {
+  display : flex;
+  justify-content : center;
+  /* align-items : center; */ 
 
-    background-color : #301e17;
-    background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/searching-books-page-img/daytime-bookshelf-mid.webp");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    
-    min-height : 100dvh;
-    font-family : Arial, sans-serif;
-    aspect-ratio: 2752 / 1536;
+  background : gray;
 
+  width : min(100vw, calc(100dvh * (2752 / 1536)));
+  max-width : 2300px;
+  aspect-ratio: 2752 / 1536;
+  /* padding : 13% 18.5%; */
+}
+
+#homepage-logo {
+    position : absolute;
+    z-index : 10;
+    top : 0;
+    left : 50%;
+
+    width : 15%;
+    height: 10%;
+    /* background : green; */
+}
+
+#vine-setting {
+    position : absolute;
+    z-index : 10;
+    top : 5%;
+    right : 20%;
 }

@@ -1,50 +1,96 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin : 0;
-  padding: 0;
-}
-
 body {
-    display : flex;
-    justify-content : center;
-    align-items : center;
-
-    background-color : #301e17;
     background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/personal-page-img/daytime-desktop.webp");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow: hidden;
-    
-    min-height : 100dvh;
-    font-family : Arial, sans-serif;
 }
 
 main {
-    display : flex;
-    flex-direction : column;
-    justify-content : center;
-    align-items : center;
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
 
     position : relative;
     z-index : 1;
 
     background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/personal-page-img/daytime-book-background.webp");
-    background-size : cover;
+    background-size : 100% 100%;
     background-position : center;
-    background-repeat: no-repeat;
-
-    width: min(100vw, calc(100dvh * (2752 / 1536)));
-    max-width: 2300px;
-    height: 100dvh;
-    aspect-ratio: 2752 / 1536;
+    background-repeat : no-repeat;
+    /* background-color: black; */
+    
+    width : min(135vw, calc(110dvh * (2752 / 1536)));
+    max-width : 2300px;
+    aspect-ratio : 2752 / 1536;
+    padding : 8.5% 18.5% 10%;
+    container-type : inline-size;
 }
 
+.book-page {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    gap : 0.8cqw;
 
-main div {
-    /* width : 50%;
-    height: 90%;
-    background : black; */
+    /* background-color : white; */
+}
+
+#page-profile {
+    position : relative;
+
+    padding : 0 6% 0 0;
+}
+
+#report-bonus-img {
+    position : absolute;
+    z-index : 10;
+    bottom : 10%;
+    right : 5%;
+    /* transform : translateY(-50%); */
+
+    width : 17%;
+    height : 17%;
+}
+
+#login-page-btn {
+    position : absolute;
+    z-index : 10;
+    top : -3%;
+    right:15%;
+}
+
+#personal-info {
+    font-size : var(--text-body);
+    color : var(--color-ink-primary);
+}
+
+#personal-info h2 {
+    font-size : var(--text-title);
+    margin : 1cqw;
+    padding-bottom : 0.4cqw;
+    border-bottom : 1px solid rgba(58, 38, 24, 0.3);
+}
+
+.personal-info-form p {
+    font-size: var(--text-small);
+}
+
+.personal-info-form label{
+    display : flex;
+    flex-direction : column;
+    gap : 0.3cqw;
+    width : 100%;
+    padding :2%;
+    margin : 2%;
+}
+
+.personal-info-form input[type="text"],
+.personal-info-form input[type="email"],
+.personal-info-form textarea {
+    background-color : var(--color-surface);
+    border : 1px solid var(--color-border);
+    border-bottom : 1.5px solid var(--color-ink-secondary);
+    border-radius: 0.25cqw;
+
+    width : 60%;
+    padding:1%;
 }
 
 #homepage-logo {
@@ -55,17 +101,14 @@ main div {
 
     width : 15%;
     height: 10%;
+    /* background : green; */
 }
 
-#report-bonus-img {
+#vine-setting {
     position : absolute;
     z-index : 10;
-    bottom : 7%;
-    left : 42%;
-    transform : translateY(-50%);
-
-    width : 5%;
-    height : auto;
+    top : 5%;
+    right : 20%;
 }
 
 #prev-page-btn{
@@ -82,10 +125,10 @@ main div {
 
 #next-page-btn{
     position : absolute;
-    bottom : 15%;
+    bottom: 15%;
     right : 20%;
     transform : translateY(-50%);
-    z-index : 10;
+    z-index: 10;
 
     background-color : transparent;
     border : none;

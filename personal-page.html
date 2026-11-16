@@ -4,10 +4,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"  content="width=device-width,initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iansui&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="personal-page.css">
+
     <title>個人書頁</title>
     <meta name="description" content="一個含有個人資料、書籍收藏與閱讀紀錄的頁面">
+
     <script src="personal-page.js" defer></script>
   </head>
   
@@ -19,17 +28,34 @@
       </nav>
     </header> -->
 
-    <main class="">
-
+    <main class="book-canvas">
+      
       <a href="index.html" id="homepage-logo">
-        <img src="1.jpg" alt="" class="wooden-board-img" id="wooden-board-img">
+        <img src="1.jpg" alt="" id="wooden-board-img" class="wooden-board-img">
         <h1>樹冠下的書藏</h1>
         <h2 lang="en">Sylvan Folios</h2>
       </a>
 
-      <div>
+
+      <button type="button" id="vine-setting">
+        <img src="1.jpg" alt="" id="vine-img" class="vine-img">
+        <span>系統設定</span>
+      </button>
+
+
+      <button type="button" id="prev-page-btn" class="page-nav-btn prev-btn" aria-label="上一頁">
+        <img src="" alt="" class="vine-arrow-img">
+      </button>
+
+
+      <button type="button" id="next-page-btn" class="page-nav-btn next-btn" aria-label="下一頁">
+        <img src="" alt="" class="vine-arrow-img">
+      </button>
+      
+
+      <div id="page-profile" class="book-page">
         
-        <section class="personal-info">
+        <section id="personal-info">
 
           <h2>個人資料</h2>
 
@@ -38,8 +64,8 @@
             <label>
               <img src=""
               alt="目前大頭貼"
-              class="user-avatar-img"
               id="user-avatar-img"
+              class="user-avatar-img"
               >
               更換頭像：
               <input id="user-avatar" name="user-avatar" type="file" accept="image/*">
@@ -48,7 +74,7 @@
 
             <label>
               姓名： 
-              <input id="user-name" name="user-name" autocomplete="name" type="text" required placeholder="更改姓名"> 
+              <input id="user-name" name="user-name" autocomplete="name" type="text" placeholder="更改姓名" required> 
             </label>
 
 
@@ -58,15 +84,16 @@
                 name="user-email"
                 autocomplete="email"
                 type="email"
-                placeholder="更改電子郵件"
+                placeholder="尚無電子郵件"
                 disabled
                 required>
             </label>
-            <p>注意：電子郵件無法更改，若需更改請聯絡系統管理員。</p>
+            <p>注：電子郵件無法更改，若需更改請聯絡管理員。</p>
+
 
             <label>
               自我介紹：
-              <textarea name="personal-introduction" id="personal-introduction" placeholder="請輸入個人簡介"></textarea>
+              <textarea id="personal-introduction" name="personal-introduction" placeholder="請輸入個人簡介"></textarea>
             </label>
 
             
@@ -77,68 +104,116 @@
         </section>
         
 
-        <section>
+        <div class="page-tools">
 
-          <a href="" id="login-page-btn">
+          <a href="login.html" id="login-page-btn">
             <figure>
               <img src=""
-                alt="" 
-                class="login-img" 
+                alt=""
                 id="login-img"
+                class="login-img"
               >
               <figcaption>登入頁面</figcaption>
             </figure>
           </a>
 
 
-          <a href="" id="report-bonus-btn">
+          <a href="" id="report-bonus-btn" aria-label="封存紀錄">
             <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/personal-page-img/sealed-letters.webp"
-              alt="" 
-              class="report-bonus-img" 
+              alt=""
               id="report-bonus-img"
-              aria-label="封存紀錄"
+              class="report-bonus-img"
             >
           </a>
           
-        </section>
+        </div>
         
       </div>
       
-      <div>
 
-        <section class="book-collection">
+      <div id="page-book" class="book-page">
 
-          <h2>書籍收藏</h2>
+        <div role="tablist">
+          <button type="button" id="tab-borrowing" class="tab-btn" role="tab" data-target="panal-borrowing" aria-selected="true">借閱紀錄</button>
+          <button type="button" id="tab-reading" class="tab-btn" role="tab" data-target="panal-reading" aria-selected="false">閱讀紀錄</button>
+          <button type="button" id="tab-collection" class="tab-btn" role="tab" data-target="panal-collection" aria-selected="false">書籍收藏</button>
+        </div>
 
-        </section> 
+
+        <section id="panal-borrowing" class="borrowing-record" role="tabpanel" aria-labelledby="tab-borrowing">
+
+          <h2>借閱紀錄</h2>
+          
+        </section>
 
 
-        <section class="reading-record">
+        <section id="panal-reading" class="reading-record" role="tabpanel" aria-labelledby="tab-reading" hidden>
 
           <h2>閱讀紀錄</h2>
 
         </section>
 
 
-        <section class="borrowing-record">
+        <section id="panal-collection" class="book-collection" role="tabpanel" aria-labelledby="tab-collection" hidden>
 
-          <h2>借閱紀錄</h2>
-          
-        </section>
+          <h2>書籍收藏</h2>
 
+        </section> 
+
+
+        <div class="batch-controls">
+
+          <button type="button" id="prev-batch-btn" class="inner-arrow-btn prev-batch" aria-label="上一批書籍">◀</button>
+
+          <span class="batch-indicator" aria-live="polite"></span>
+
+          <button type="button" id="next-batch-btn" class="inner-arrow-btn next-batch" aria-label="下一批書籍">▶</button>
+
+        </div>
+        
       </div>
       
-      <button type="button" id="prev-page-btn" class="page-nav-btn prev-btn" aria-label="上一頁">
-        <img src="" alt="" class="vine-arrow-img">
-      </button>
-
-
-      <button type="button" id="next-page-btn" class="page-nav-btn next-btn" aria-label="下一頁">
-        <img src="" alt="" class="vine-arrow-img">
-      </button>
-
     </main>
     
+    <dialog arial-labelledy="settings-title"class="setting-menu">
+
+      <h2 id="settings-title">系統設定</h2>
+
+      <ul>
+        <li>
+          <button type="button" id="theme-menu-btn">
+            <img src="" alt="" class="theme-img">
+            <span>切換主題</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="language-menu-btn" disabled>
+            <img src="" alt="" class="language-img">
+            <span>切換語言</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="about-menu-btn" disabled>
+            <img src="" alt="" class="about-img">
+            <span>使用教學</span>
+          </button>
+        </li>
+
+
+        <li>
+          <button type="button" id="close-menu-btn">
+            <img src="" alt="" class="close-img">
+            <span>關閉選單</span>
+          </button>
+        </li>
+      </ul>
+
+    </dialog>
+
   </body>
 
 </html>

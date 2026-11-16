@@ -1,0 +1,50 @@
+:root {
+    --color-ink-primary: hsl(30, 50%, 15%);      /* 主要文字、標題 */
+    --color-ink-secondary: hsl(30, 47%, 66%);    /* 提示小字、佔位符 */
+    --color-border: hsla(30, 40%, 20%, 0.35);    /* 輸入框與標題底線 */
+    --color-surface: hsla(30, 40%, 20%, 0.08);   /* 輸入框微深透光底色 */
+
+    --color-accent: hsl(35, 65%, 45%);/* 點綴色（色相 35 琥珀金） */
+
+    --font-elvish: "Tangerine", "Iansui", cursive, serif;
+    --text-title : clamp(20px, 1.85cqw, 36px);
+    --text-body : clamp(14px, 1.15cqw, 22px);
+    --text-small : clamp(12px, 0.95cqw, 17px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin : 0;
+  padding: 0;
+}
+
+body {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+
+    background-color : #301e17;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow : hidden;
+
+    min-height : 100dvh;
+    font-family : var(--font-elvish);
+}
+
+input, textarea, button {
+    font-size : inherit;
+    font-family:inherit;
+    color : inherit;
+}
+
+button {
+    background-color : var(--color-ink-primary);
+    border : none;
+    border-radius : 0.25cqw;
+
+    padding : 0.2cqw 0.6cqw;
+    color :#f4e4bc;
+    cursor : pointer;
+}

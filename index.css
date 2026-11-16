@@ -1,26 +1,6 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin : 0;
-  padding: 0;
-}
-
 body {
-    display : flex;
-    justify-content : center;
-    align-items : center;
-
-    background-color : #301e17;
     background-image : url("https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/index-img/daytime-wooden-board-background.webp");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow : hidden;
-
-    min-height : 100dvh;
-    font-family : Arial, sans-serif;
 }
-
-
 
 .homepage {
     position : relative;
@@ -36,7 +16,6 @@ body {
     height: 100dvh;
     aspect-ratio: 2752 / 1536;
 }
-
 
 .homepage::after {
     content : "";
@@ -57,8 +36,6 @@ body {
     height: 18%;
 }
 
-
-
 #homepage-logo {
     position : absolute;
     z-index : 10;
@@ -67,8 +44,15 @@ body {
 
     width : 15%;
     height: 10%;
+    /* background-color : green; */
 }
 
+#vine-setting {
+    position : absolute;
+    z-index : 10;
+    top : 5% ;
+    right : 5%;
+}
 
 #personal-page-btn {
     display:block;
@@ -81,7 +65,6 @@ body {
     width : 20%;
     height: 20%;
 }
-
 
 #search-page-btn {
     display : block;
