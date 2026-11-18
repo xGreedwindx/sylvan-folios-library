@@ -16,6 +16,7 @@
   box-sizing: border-box;
   margin : 0;
   padding: 0;
+  font-family: var(--font-elvish);
 }
 
 body {
@@ -30,12 +31,10 @@ body {
     overflow : hidden;
 
     min-height : 100dvh;
-    font-family : var(--font-elvish);
 }
 
 input, textarea, button {
     font-size : inherit;
-    font-family:inherit;
     color : inherit;
 }
 
@@ -47,4 +46,32 @@ button {
     padding : 0.2cqw 0.6cqw;
     color :#f4e4bc;
     cursor : pointer;
+}
+
+a {
+    text-decoration : none;
+    color : inherit;
+}
+
+.pointable-component {
+    cursor: pointer;
+    transition : transform 0.3s ease, filter 0.3s ease;
+}
+
+.pointable-component:hover {
+    transform : translateY(-0.35cqw) scale(1.03);
+    filter : drop-shadow(0 0 0.7cqw hsla(35, 84%, 63%, 0.75))
+}
+
+.captioned-figure {
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items : center;
+}
+
+.fit-img {
+    display : block;
+    width : 100%;
+    height : auto;
 }

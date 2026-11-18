@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iansui&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="index.css">
@@ -31,36 +29,72 @@
     <main class="homepage">
       
       <a href="index.html" id="homepage-logo">
-        <img src="1.jpg" alt="" id="wooden-board-img" class="wooden-board-img">
-        <h1>樹冠下的書藏</h1>
-        <h2 lang="en">Sylvan Folios</h2>
+        <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/shared-folder/daytime-wooden%20bulletin%20board.webp"
+         alt="樹冠下的書藏 Sylvan Folios - 返回主頁"
+         id="wooden-board-img"
+         class="wooden-board-img pointable-component fit-img"
+        >
       </a>
 
 
-      <button type="button" id="vine-setting">
-        <img src="1.jpg" alt="" id="vine-img" class="vine-img">
+      <button type="button" id="vine-setting" class="pointable-component captioned-figure">
+        <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/shared-folder/daytime-setting.webp"
+         alt=""
+         id="vine-img"
+         class="vine-img fit-img"
+        >
         <span>系統設定</span>
       </button>
 
 
       <a href="personal-page.html" id="personal-page-btn">
-        <figure>
-          <img src="1.jpg" alt="" id="desk-img" class="desk-img">
+        <figure class="captioned-figure pointable-component">
+          <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/index-img/daytime-desk.webp"
+           alt=""
+           id="desk-img"
+           class="desk-img fit-img"
+          >
           <figcaption>個人書庫</figcaption>
         </figure>
       </a>
 
 
       <a href="searching-books-page.html" id="search-page-btn">
-        <figure>
-          <img src="1.jpg" alt="" id="search-img" class="search-img">
+        <figure class="captioned-figure pointable-component">
+          <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/index-img/daytime-shelf.webp"
+           alt=""
+           id="search-img"
+           class="search-img fit-img"
+          >
           <figcaption>檢索書籍</figcaption>
         </figure>
       </a>
 
+
+      <div class="column-frame" id="left-column" aria-hidden="true">
+        <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/index-img/daytime-column.webp"
+         alt=""
+         class="column"
+         draggable="false"
+         loading="eager"
+         decoding="async"
+        >
+      </div>
+
+
+      <div id="right-column" class="column-frame" aria-hidden="true">
+        <img src="https://mfzziekttcmyhiyplwxn.supabase.co/storage/v1/object/public/site-assets/index-img/daytime-column.webp"
+         alt=""
+         class="column"
+         draggable="false"
+         loading="eager"
+         decoding="async"
+        >
+      </div>
+
     </main>
 
-    <dialog arial-labelledy="welcome-dialog" class="welcome-dialog">
+    <dialog aria-labelledby="welcome-dialog" class="welcome-dialog">
 
       <h2 id="welcome-dialog"></h2>
 
@@ -72,7 +106,7 @@
 
     </dialog>
 
-    <dialog arial-labelledy="settings-title"class="setting-menu">
+    <dialog aria-labelledby="settings-title"class="setting-menu">
 
       <h2 id="settings-title">系統設定</h2>
 
